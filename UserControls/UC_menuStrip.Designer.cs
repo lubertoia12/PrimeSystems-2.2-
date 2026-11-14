@@ -28,40 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSUARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLIENTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pROVEEDORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOMPRASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(74)))), ((int)(((byte)(95)))));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hOMEToolStripMenuItem,
-            this.uSUARIOToolStripMenuItem,
-            this.cLIENTEToolStripMenuItem,
-            this.pROVEEDORToolStripMenuItem,
-            this.cOMPRASToolStripMenuItem,
-            this.aRTToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(854, 29);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // hOMEToolStripMenuItem
             // 
@@ -89,33 +64,11 @@
             // 
             // pROVEEDORToolStripMenuItem
             // 
-            this.pROVEEDORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarProveedorToolStripMenuItem,
-            this.modificarProveedorToolStripMenuItem,
-            this.eliminarProveedorToolStripMenuItem});
             this.pROVEEDORToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pROVEEDORToolStripMenuItem.Name = "pROVEEDORToolStripMenuItem";
             this.pROVEEDORToolStripMenuItem.Size = new System.Drawing.Size(121, 25);
             this.pROVEEDORToolStripMenuItem.Text = "PROVEEDOR";
             this.pROVEEDORToolStripMenuItem.Click += new System.EventHandler(this.pROVEEDORToolStripMenuItem_Click);
-            // 
-            // agregarProveedorToolStripMenuItem
-            // 
-            this.agregarProveedorToolStripMenuItem.Name = "agregarProveedorToolStripMenuItem";
-            this.agregarProveedorToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
-            this.agregarProveedorToolStripMenuItem.Text = "Agregar proveedor";
-            // 
-            // modificarProveedorToolStripMenuItem
-            // 
-            this.modificarProveedorToolStripMenuItem.Name = "modificarProveedorToolStripMenuItem";
-            this.modificarProveedorToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
-            this.modificarProveedorToolStripMenuItem.Text = "Modificar proveedor";
-            // 
-            // eliminarProveedorToolStripMenuItem
-            // 
-            this.eliminarProveedorToolStripMenuItem.Name = "eliminarProveedorToolStripMenuItem";
-            this.eliminarProveedorToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
-            this.eliminarProveedorToolStripMenuItem.Text = "Eliminar proveedor";
             // 
             // cOMPRASToolStripMenuItem
             // 
@@ -127,31 +80,28 @@
             // 
             // aRTToolStripMenuItem
             // 
-            this.aRTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarArticuloToolStripMenuItem,
-            this.modificarArticuloToolStripMenuItem,
-            this.eliminarArticuloToolStripMenuItem});
             this.aRTToolStripMenuItem.Name = "aRTToolStripMenuItem";
             this.aRTToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
             this.aRTToolStripMenuItem.Text = "ARTICULOS";
             // 
-            // agregarArticuloToolStripMenuItem
+            // menuStrip1
             // 
-            this.agregarArticuloToolStripMenuItem.Name = "agregarArticuloToolStripMenuItem";
-            this.agregarArticuloToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
-            this.agregarArticuloToolStripMenuItem.Text = "Agregar articulo";
-            // 
-            // modificarArticuloToolStripMenuItem
-            // 
-            this.modificarArticuloToolStripMenuItem.Name = "modificarArticuloToolStripMenuItem";
-            this.modificarArticuloToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
-            this.modificarArticuloToolStripMenuItem.Text = "Modificar articulo";
-            // 
-            // eliminarArticuloToolStripMenuItem
-            // 
-            this.eliminarArticuloToolStripMenuItem.Name = "eliminarArticuloToolStripMenuItem";
-            this.eliminarArticuloToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
-            this.eliminarArticuloToolStripMenuItem.Text = "eliminar articulo";
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(74)))), ((int)(((byte)(95)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hOMEToolStripMenuItem,
+            this.uSUARIOToolStripMenuItem,
+            this.cLIENTEToolStripMenuItem,
+            this.pROVEEDORToolStripMenuItem,
+            this.cOMPRASToolStripMenuItem,
+            this.aRTToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(854, 29);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // UC_menuStrip
             // 
@@ -168,18 +118,13 @@
         }
 
         #endregion
+
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uSUARIOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cLIENTEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pROVEEDORToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cOMPRASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aRTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarProveedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarProveedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarProveedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarArticuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarArticuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarArticuloToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

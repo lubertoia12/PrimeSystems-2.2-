@@ -20,31 +20,38 @@ namespace PrimeSystems_2._2_.forms.MODULOS
         }
 
         public int idSeleccionado { get; set; }
+        private void cargaEncabezados()
+        {
+            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
+            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
+            from Usuario where 1 = 0";
 
+            consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
+        }
         public void CargarGrillaActivos()
         {
-            string consulta = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-                        DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-                        from Usuario where activo = 1";
-            consultas.traer_datos_sql(consulta, dgv_usuarios);
+            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
+            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
+            from Usuario where activo = 1";
+            consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
         public void CargarGrillaTodos()
         {
-            string consulta = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-                        DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-                        from Usuario";
-            consultas.traer_datos_sql(consulta, dgv_usuarios);
+            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
+            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
+            from Usuario";
+            consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
         public void CargarGrillaInactivo()
         {
-            string consulta = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-                        DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-                        from Usuario where activo = 0";
-            consultas.traer_datos_sql(consulta, dgv_usuarios);
+            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
+            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
+            from Usuario where activo = 0";
+            consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
         private void USUARIOS_Load(object sender, EventArgs e)
         {
-            
+            cargaEncabezados();
         }
         private void dgv_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {

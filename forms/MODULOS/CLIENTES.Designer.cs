@@ -36,6 +36,9 @@
             this.btn_modificar_cliente = new System.Windows.Forms.Button();
             this.btn_cancelar_cliente = new System.Windows.Forms.Button();
             this.pnl_filtro_clientes = new System.Windows.Forms.Panel();
+            this.btn_filtro_activas = new System.Windows.Forms.Button();
+            this.btn_filtro_inactivas = new System.Windows.Forms.Button();
+            this.btn_filtro_todos = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +46,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel_frm = new System.Windows.Forms.Panel();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
-            this.btn_filtro_activas = new System.Windows.Forms.Button();
-            this.btn_filtro_inactivas = new System.Windows.Forms.Button();
-            this.btn_filtro_todos = new System.Windows.Forms.Button();
             this.pnl_fondo.SuspendLayout();
             this.pnl_btn.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -183,6 +183,60 @@
             this.pnl_filtro_clientes.Size = new System.Drawing.Size(1520, 78);
             this.pnl_filtro_clientes.TabIndex = 0;
             // 
+            // btn_filtro_activas
+            // 
+            this.btn_filtro_activas.AutoSize = true;
+            this.btn_filtro_activas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
+            this.btn_filtro_activas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_filtro_activas.FlatAppearance.BorderSize = 0;
+            this.btn_filtro_activas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
+            this.btn_filtro_activas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filtro_activas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.btn_filtro_activas.Location = new System.Drawing.Point(1053, 24);
+            this.btn_filtro_activas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_filtro_activas.Name = "btn_filtro_activas";
+            this.btn_filtro_activas.Size = new System.Drawing.Size(99, 32);
+            this.btn_filtro_activas.TabIndex = 8;
+            this.btn_filtro_activas.Text = "ACTIVAS";
+            this.btn_filtro_activas.UseVisualStyleBackColor = false;
+            this.btn_filtro_activas.Click += new System.EventHandler(this.btn_filtro_activas_Click);
+            // 
+            // btn_filtro_inactivas
+            // 
+            this.btn_filtro_inactivas.AutoSize = true;
+            this.btn_filtro_inactivas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
+            this.btn_filtro_inactivas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_filtro_inactivas.FlatAppearance.BorderSize = 0;
+            this.btn_filtro_inactivas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
+            this.btn_filtro_inactivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filtro_inactivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.btn_filtro_inactivas.Location = new System.Drawing.Point(1171, 25);
+            this.btn_filtro_inactivas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_filtro_inactivas.Name = "btn_filtro_inactivas";
+            this.btn_filtro_inactivas.Size = new System.Drawing.Size(116, 32);
+            this.btn_filtro_inactivas.TabIndex = 7;
+            this.btn_filtro_inactivas.Text = "INACTIVAS";
+            this.btn_filtro_inactivas.UseVisualStyleBackColor = false;
+            this.btn_filtro_inactivas.Click += new System.EventHandler(this.btn_filtro_inactivas_Click);
+            // 
+            // btn_filtro_todos
+            // 
+            this.btn_filtro_todos.AutoSize = true;
+            this.btn_filtro_todos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(227)))), ((int)(((byte)(241)))));
+            this.btn_filtro_todos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_filtro_todos.FlatAppearance.BorderSize = 0;
+            this.btn_filtro_todos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.btn_filtro_todos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filtro_todos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            this.btn_filtro_todos.Location = new System.Drawing.Point(940, 24);
+            this.btn_filtro_todos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_filtro_todos.Name = "btn_filtro_todos";
+            this.btn_filtro_todos.Size = new System.Drawing.Size(85, 32);
+            this.btn_filtro_todos.TabIndex = 6;
+            this.btn_filtro_todos.Text = "TODAS";
+            this.btn_filtro_todos.UseVisualStyleBackColor = false;
+            this.btn_filtro_todos.Click += new System.EventHandler(this.btn_filtro_todos_Click);
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
@@ -248,66 +302,15 @@
             // 
             this.dgv_clientes.BackgroundColor = System.Drawing.Color.White;
             this.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_clientes.Location = new System.Drawing.Point(187, 110);
+            this.dgv_clientes.Location = new System.Drawing.Point(80, 110);
             this.dgv_clientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_clientes.Name = "dgv_clientes";
             this.dgv_clientes.ReadOnly = true;
             this.dgv_clientes.RowHeadersWidth = 51;
             this.dgv_clientes.RowTemplate.Height = 24;
-            this.dgv_clientes.Size = new System.Drawing.Size(957, 167);
+            this.dgv_clientes.Size = new System.Drawing.Size(1221, 178);
             this.dgv_clientes.TabIndex = 1;
             this.dgv_clientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellClick);
-            // 
-            // btn_filtro_activas
-            // 
-            this.btn_filtro_activas.AutoSize = true;
-            this.btn_filtro_activas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
-            this.btn_filtro_activas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_filtro_activas.FlatAppearance.BorderSize = 0;
-            this.btn_filtro_activas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
-            this.btn_filtro_activas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_filtro_activas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.btn_filtro_activas.Location = new System.Drawing.Point(1053, 24);
-            this.btn_filtro_activas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_filtro_activas.Name = "btn_filtro_activas";
-            this.btn_filtro_activas.Size = new System.Drawing.Size(99, 32);
-            this.btn_filtro_activas.TabIndex = 8;
-            this.btn_filtro_activas.Text = "ACTIVAS";
-            this.btn_filtro_activas.UseVisualStyleBackColor = false;
-            // 
-            // btn_filtro_inactivas
-            // 
-            this.btn_filtro_inactivas.AutoSize = true;
-            this.btn_filtro_inactivas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(234)))), ((int)(((byte)(239)))));
-            this.btn_filtro_inactivas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_filtro_inactivas.FlatAppearance.BorderSize = 0;
-            this.btn_filtro_inactivas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
-            this.btn_filtro_inactivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_filtro_inactivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.btn_filtro_inactivas.Location = new System.Drawing.Point(1171, 25);
-            this.btn_filtro_inactivas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_filtro_inactivas.Name = "btn_filtro_inactivas";
-            this.btn_filtro_inactivas.Size = new System.Drawing.Size(116, 32);
-            this.btn_filtro_inactivas.TabIndex = 7;
-            this.btn_filtro_inactivas.Text = "INACTIVAS";
-            this.btn_filtro_inactivas.UseVisualStyleBackColor = false;
-            // 
-            // btn_filtro_todos
-            // 
-            this.btn_filtro_todos.AutoSize = true;
-            this.btn_filtro_todos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(227)))), ((int)(((byte)(241)))));
-            this.btn_filtro_todos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_filtro_todos.FlatAppearance.BorderSize = 0;
-            this.btn_filtro_todos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
-            this.btn_filtro_todos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_filtro_todos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            this.btn_filtro_todos.Location = new System.Drawing.Point(940, 24);
-            this.btn_filtro_todos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_filtro_todos.Name = "btn_filtro_todos";
-            this.btn_filtro_todos.Size = new System.Drawing.Size(85, 32);
-            this.btn_filtro_todos.TabIndex = 6;
-            this.btn_filtro_todos.Text = "TODAS";
-            this.btn_filtro_todos.UseVisualStyleBackColor = false;
             // 
             // CLIENTES
             // 

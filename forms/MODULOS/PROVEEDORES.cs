@@ -22,31 +22,39 @@ namespace PrimeSystems_2._2_.forms.MODULOS
 
 
         public int idSeleccionado { get; set; }
+        private void cargaEncabezados()
+        {
+            string consultaProveedores = @"select id_proveedor AS ID, proveedor AS Proveedor, CUIT,
+            nombre AS Nombre, mail AS Mail, direccion AS Direccion,
+            tel AS Telefono, activo AS Estado
+            from Proveedor where 1= 0";
 
+            consultas.traer_datos_sql(consultaProveedores, dgv_proveedores);
+        }
 
         public void CargarGrillaProveedoresACTIVOS()
         {
-            string consulta = @"select id_proveedor AS ID, proveedor AS [Razón social], CUIT,
-                    nombre AS Nombre, apellido AS Apellido, tel AS Telefono,
-                    mail AS Mail, direccion AS Direccion, activo AS Estado
-                    from Proveedor where activo = 1";
-            consultas.traer_datos_sql(consulta, dgv_proveedores);
+            string consultaProveedores = @"select id_proveedor AS ID, proveedor AS Proveedor, CUIT,
+            nombre AS Nombre, mail AS Mail, direccion AS Direccion,
+            tel AS Telefono, activo AS Estado
+            from Proveedor where activo = 1";
+            consultas.traer_datos_sql(consultaProveedores, dgv_proveedores);
         }
         public void CargarGrillaProveedoresINACTIVOS()
         {
-            string consulta = @"select id_proveedor AS ID, proveedor AS [Razón social], CUIT,
-                    nombre AS Nombre, apellido AS Apellido, tel AS Telefono,
-                    mail AS Mail, direccion AS Direccion, activo AS Estado
-                    from Proveedor where activo = 0";
-            consultas.traer_datos_sql(consulta, dgv_proveedores);
+            string consultaProveedores = @"select id_proveedor AS ID, proveedor AS Proveedor, CUIT,
+            nombre AS Nombre, mail AS Mail, direccion AS Direccion,
+            tel AS Telefono, activo AS Estado
+            from Proveedor where activo = 0";
+            consultas.traer_datos_sql(consultaProveedores, dgv_proveedores);
         }
         public void CargarGrillaProveedoresTODOS()
         {
-            string consulta = @"select id_proveedor AS ID, proveedor AS [Razón social], CUIT,
-                    nombre AS Nombre, apellido AS Apellido, tel AS Telefono,
-                    mail AS Mail, direccion AS Direccion, activo AS Estado
-                    from Proveedor";
-            consultas.traer_datos_sql(consulta, dgv_proveedores);
+            string consultaProveedores = @"select id_proveedor AS ID, proveedor AS Proveedor, CUIT,
+            nombre AS Nombre, mail AS Mail, direccion AS Direccion,
+            tel AS Telefono, activo AS Estado
+            from Proveedor";
+            consultas.traer_datos_sql(consultaProveedores, dgv_proveedores);
         }
 
 
@@ -55,6 +63,7 @@ namespace PrimeSystems_2._2_.forms.MODULOS
 
         private void PROVEEDORES_Load(object sender, EventArgs e)
         {
+            cargaEncabezados();
         }
         private void dgv_proveedores_CellClick(object sender, DataGridViewCellEventArgs e)
         {

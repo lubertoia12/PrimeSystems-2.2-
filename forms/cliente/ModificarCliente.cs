@@ -67,7 +67,7 @@ namespace PrimeSystems_2._2_.forms.cliente
                 bool resultado = consultas.ModificarCliente(id, cliente_nom_mod.Text, cliente_ape_mod.Text, cliente_tel_mod.Text, cliente_dni_mod.Text, /*cliente_mail_mod.Text,*/  activo_mod_cliente.Checked);
                 if (resultado == true)
                 {
-                    c.CargarGrillaClientes();
+                    c.CargarGrillaClientesActivos();
                     this.Close();
                 }
                 else { MessageBox.Show("No se pudo modificar el Cliente."); }

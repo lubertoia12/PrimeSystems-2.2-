@@ -21,7 +21,7 @@ namespace PrimeSystems_2._2_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login()); 
+            Application.Run(new home()); 
         }
     }
 }

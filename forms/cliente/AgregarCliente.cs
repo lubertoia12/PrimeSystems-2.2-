@@ -39,7 +39,7 @@ namespace PrimeSystems_2._2_.forms.cliente
             if (Valida_alta_cliente() == true)
             {
                 consultas.AgregarCliente(alta_nom_cliente.Text, alta_ape_cliente.Text, alta_tel_cliente.Text ,alta_dni_cliente.Text, alta_activo_cliente.Checked);
-                c.CargarGrillaClientes();
+                c.CargarGrillaClientesActivos();
                 this.Close();
             }
         }
