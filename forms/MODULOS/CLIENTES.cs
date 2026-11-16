@@ -62,6 +62,7 @@ namespace PrimeSystems_2._2_.forms.MODULOS
 
         private void CLIENTES_Load(object sender, EventArgs e)
         {
+            
             cargaEncabezados();
         }
 
@@ -78,6 +79,7 @@ namespace PrimeSystems_2._2_.forms.MODULOS
 
             AgregarCliente cliente = new AgregarCliente();
 
+            cliente.c=this;
             cliente.TopLevel = false;
             cliente.FormBorderStyle = FormBorderStyle.None;
             cliente.Dock = DockStyle.Fill;

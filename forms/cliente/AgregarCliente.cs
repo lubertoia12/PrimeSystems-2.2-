@@ -20,7 +20,7 @@ namespace PrimeSystems_2._2_.forms.cliente
             InitializeComponent();
         }
 
-        CLIENTES c { get; set; }
+        public CLIENTES c { get; set; }
 
         public bool Valida_alta_cliente()
         {
@@ -38,7 +38,7 @@ namespace PrimeSystems_2._2_.forms.cliente
         {
             if (Valida_alta_cliente() == true)
             {
-                consultas.AgregarCliente(alta_nom_cliente.Text, alta_ape_cliente.Text, alta_tel_cliente.Text ,alta_dni_cliente.Text, alta_activo_cliente.Checked);
+                consultas.AgregarCliente(alta_nom_cliente.Text, alta_ape_cliente.Text, alta_tel_cliente.Text ,alta_dni_cliente.Text,alta_mail_cliente.Text, alta_dire_cliente.Text, alta_activo_cliente.Checked);
                 c.CargarGrillaClientesActivos();
                 this.Close();
             }

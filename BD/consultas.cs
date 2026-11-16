@@ -164,7 +164,7 @@ namespace PrimeSystems_2._2_.BD
 
 
 
-        public static void AgregarCliente(string nombre, string entidad, string telefono, string cuit, bool activo)
+        public static void AgregarCliente(string nombre, string entidad, string telefono, string cuit,string mail, string direccion, bool activo)
         {
 
             SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
@@ -174,21 +174,24 @@ namespace PrimeSystems_2._2_.BD
                 cnn.Open();
 
 
-                string consulta = @"insert into Cliente (nombre, entidad, telefono, CUIT, activo) values (@D1, @D2, @D3, @D4, @D5)";
+                string consulta = @"insert into Cliente (nombre, entidad, telefono, CUIT, mail, direccion, activo) values (@D1, @D2, @D3, @D4, @D5,@D6,@D7)";
                 SqlCommand comando = new SqlCommand(consulta, cnn);
 
                 comando.Parameters.AddWithValue("@D1", nombre);
                 comando.Parameters.AddWithValue("@D2", entidad);
                 comando.Parameters.AddWithValue("@D3", telefono);
                 comando.Parameters.AddWithValue("@D4", cuit);
-                comando.Parameters.AddWithValue("@D5", activo);
+
+                comando.Parameters.AddWithValue("@D5", mail);
+                comando.Parameters.AddWithValue("@D6", direccion);
+                comando.Parameters.AddWithValue("@D7", activo);
 
                 comando.ExecuteNonQuery();
             }
             finally { cnn.Close(); }
         }
 
-        public static bool ModificarCliente(int idSeleccionado, string nombre, string entidad, string telefono, string cuit, bool activo)
+        public static bool ModificarCliente(int idSeleccionado, string nombre, string entidad, string telefono, string dni, string correo, string direccion, bool activo)
         {
 
 
@@ -197,7 +200,7 @@ namespace PrimeSystems_2._2_.BD
             {
                 cnn.Open();
 
-                string consulta = "update Cliente set nombre= @nombre,entidad=@entidad,telefono= @telefono, CUIT =@cuit, activo=@activo where id_cliente=@idSeleccionado";
+                string consulta = "update Cliente set nombre= @nombre,entidad=@entidad,telefono= @telefono, dni =@cuit,correo=@mail, direccion= @direccion, activo=@activo where id_cliente=@idSeleccionado";
 
                 SqlCommand cmd = new SqlCommand(consulta, cnn);
 
@@ -205,7 +208,9 @@ namespace PrimeSystems_2._2_.BD
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.Parameters.AddWithValue("@entidad", entidad);
                 cmd.Parameters.AddWithValue("@telefono", telefono);
-                cmd.Parameters.AddWithValue("@cuit", cuit);
+                cmd.Parameters.AddWithValue("@cuit", dni);
+                cmd.Parameters.AddWithValue("@mail", correo);
+                cmd.Parameters.AddWithValue("@direccion", direccion);
                 cmd.Parameters.AddWithValue("@activo", activo);
 
                 int filasAfectadas = cmd.ExecuteNonQuery();

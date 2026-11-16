@@ -64,7 +64,7 @@ namespace PrimeSystems_2._2_.forms.cliente
 
                 int id = c.idSeleccionado;
 
-                bool resultado = consultas.ModificarCliente(id, cliente_nom_mod.Text, cliente_ape_mod.Text, cliente_tel_mod.Text, cliente_dni_mod.Text, /*cliente_mail_mod.Text,*/  activo_mod_cliente.Checked);
+                bool resultado = consultas.ModificarCliente(id, cliente_nom_mod.Text, cliente_ape_mod.Text, cliente_tel_mod.Text, cliente_dni_mod.Text, cliente_mail_mod.Text, cliente_dire_mod.Text,activo_mod_cliente.Checked);
                 if (resultado == true)
                 {
                     c.CargarGrillaClientesActivos();

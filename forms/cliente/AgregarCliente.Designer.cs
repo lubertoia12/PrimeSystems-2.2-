@@ -181,9 +181,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(449, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Apellido";
+            this.label2.Text = "Entidad";
             // 
             // label1
             // 
