@@ -66,6 +66,18 @@
     <Compile Include="forms\cliente\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\compras\alta_compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\compras\alta_compra.Designer.cs">
+      <DependentUpon>alta_compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\compras\compras_interfaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\compras\compras_interfaz.Designer.cs">
+      <DependentUpon>compras_interfaz.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\proveedores\alta_proveedor_popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     <EmbeddedResource Include="forms\cliente\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\compras\alta_compra.resx">
+      <DependentUpon>alta_compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\compras\compras_interfaz.resx">
+      <DependentUpon>compras_interfaz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\proveedores\alta_proveedor_popup.resx">
       <DependentUpon>alta_proveedor_popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,8 +280,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="forms\compras\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

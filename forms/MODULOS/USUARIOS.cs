@@ -30,23 +30,58 @@ namespace PrimeSystems_2._2_.forms.MODULOS
         }
         public void CargarGrillaActivos()
         {
-            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-            from Usuario where activo = 1";
+            string consultaUsuarios = @"SELECT
+                U.id_usuario AS ID,
+                U.nombre AS Nombre,
+                U.apellido AS Apellido,
+                U.DNI,
+                U.tel AS Telefono,
+                U.mail AS Mail,
+                U.username AS Username,
+                UT.tipo AS Rol,
+                U.activo AS Estado
+                FROM Usuario U
+                INNER JOIN Usuarios_Tipo UT
+                ON U.id_usuario_tipo = UT.id_usuario_tipo
+                WHERE U.activo = 1";
+
             consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
         public void CargarGrillaTodos()
         {
-            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-            from Usuario";
-            consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
+            string consultaUsuarios = @"SELECT
+                U.id_usuario AS ID,
+                U.nombre AS Nombre,
+                U.apellido AS Apellido,
+                U.DNI,
+                U.tel AS Telefono,
+                U.mail AS Mail,
+                U.username AS Username,
+                UT.tipo AS Rol,
+                U.activo AS Estado
+                FROM Usuario U
+                INNER JOIN Usuarios_Tipo UT
+                ON U.id_usuario_tipo = UT.id_usuario_tipo";
+
+                consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
+
         public void CargarGrillaInactivo()
         {
-            string consultaUsuarios = @"select id_usuario AS ID, nombre AS Nombre, apellido AS Apellido,
-            DNI, tel AS Telefono, mail AS Mail, username AS Username, activo AS Estado
-            from Usuario where activo = 0";
+            string consultaUsuarios = @"SELECT
+                U.id_usuario AS ID,
+                U.nombre AS Nombre,
+                U.apellido AS Apellido,
+                U.DNI,
+                U.tel AS Telefono,
+                U.mail AS Mail,
+                U.username AS Username,
+                UT.tipo AS Rol,
+                U.activo AS Estado
+                FROM Usuario U
+                INNER JOIN Usuarios_Tipo UT
+                ON U.id_usuario_tipo = UT.id_usuario_tipo
+                WHERE U.activo = 0";
             consultas.traer_datos_sql(consultaUsuarios, dgv_usuarios);
         }
         private void USUARIOS_Load(object sender, EventArgs e)

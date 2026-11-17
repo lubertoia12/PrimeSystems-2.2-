@@ -80,7 +80,7 @@
             this.btn_filtro_activas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
             this.btn_filtro_activas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_filtro_activas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.btn_filtro_activas.Location = new System.Drawing.Point(1048, 21);
+            this.btn_filtro_activas.Location = new System.Drawing.Point(1068, 24);
             this.btn_filtro_activas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_filtro_activas.Name = "btn_filtro_activas";
             this.btn_filtro_activas.Size = new System.Drawing.Size(99, 32);
@@ -98,7 +98,7 @@
             this.btn_filtro_inactivas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
             this.btn_filtro_inactivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_filtro_inactivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.btn_filtro_inactivas.Location = new System.Drawing.Point(1165, 22);
+            this.btn_filtro_inactivas.Location = new System.Drawing.Point(1185, 25);
             this.btn_filtro_inactivas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_filtro_inactivas.Name = "btn_filtro_inactivas";
             this.btn_filtro_inactivas.Size = new System.Drawing.Size(116, 32);
@@ -116,7 +116,7 @@
             this.btn_filtro_todos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
             this.btn_filtro_todos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_filtro_todos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            this.btn_filtro_todos.Location = new System.Drawing.Point(935, 21);
+            this.btn_filtro_todos.Location = new System.Drawing.Point(955, 24);
             this.btn_filtro_todos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_filtro_todos.Name = "btn_filtro_todos";
             this.btn_filtro_todos.Size = new System.Drawing.Size(85, 32);
@@ -139,7 +139,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(612, 33);
+            this.label2.Location = new System.Drawing.Point(589, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 16);
             this.label2.TabIndex = 4;
@@ -149,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label1.Location = new System.Drawing.Point(251, 33);
+            this.label1.Location = new System.Drawing.Point(236, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 3;
@@ -160,7 +160,7 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(701, 27);
+            this.textBox2.Location = new System.Drawing.Point(665, 31);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(169, 22);
@@ -170,7 +170,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(357, 31);
+            this.textBox1.Location = new System.Drawing.Point(342, 31);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(191, 22);
@@ -184,13 +184,13 @@
             this.dgv_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_usuarios.Location = new System.Drawing.Point(80, 110);
+            this.dgv_usuarios.Location = new System.Drawing.Point(52, 110);
             this.dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_usuarios.Name = "dgv_usuarios";
             this.dgv_usuarios.ReadOnly = true;
             this.dgv_usuarios.RowHeadersWidth = 51;
             this.dgv_usuarios.RowTemplate.Height = 24;
-            this.dgv_usuarios.Size = new System.Drawing.Size(1221, 178);
+            this.dgv_usuarios.Size = new System.Drawing.Size(1249, 178);
             this.dgv_usuarios.TabIndex = 1;
             this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
             // 

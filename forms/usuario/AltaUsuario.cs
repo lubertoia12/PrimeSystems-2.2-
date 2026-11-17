@@ -70,23 +70,32 @@ namespace PrimeSystems_2._2_.forms.usuario
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if (validarAddUser() == true)
+            if (cb_rol_alta.Text == "admin")
             {
-                if (validaciones.valida_contrasenias(user_pass_alta.Text, user_passConf_alta.Text))
+                if (consultas.ExisteAdministrador())
                 {
-                    consultas.AgregarUser(user_nom_alta.Text, user_ape_alta.Text, user_tel_alta.Text, user_dni_alta.Text, user_mail_alta.Text, user_user_alta.Text, activo_alta_user.Checked, user_passConf_alta.Text, cb_rol_alta.Text);
+                    MessageBox.Show("Ya existe un administrador.");
+                    return;
+                }
 
-                    MessageBox.Show("Usuario agregado.");
-                    
-                    u.CargarGrillaActivos();
-                    this.Close();
+                if (validarAddUser() == true)
+                {
+                    if (validaciones.valida_contrasenias(user_pass_alta.Text, user_passConf_alta.Text))
+                    {
+                        consultas.AgregarUser(user_nom_alta.Text, user_ape_alta.Text, user_tel_alta.Text, user_dni_alta.Text, user_mail_alta.Text, user_user_alta.Text, activo_alta_user.Checked, user_passConf_alta.Text, cb_rol_alta.Text);
 
+                        MessageBox.Show("Usuario agregado.");
+
+                        u.CargarGrillaActivos();
+                        this.Close();
+
+                    }
+                }
+                else { MessageBox.Show("No se pudo agregar"); 
                 }
             }
-            else { MessageBox.Show("No se pudo agregar"); }
-
-
         }
+
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {

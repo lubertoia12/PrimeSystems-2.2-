@@ -16,23 +16,37 @@ namespace PrimeSystems_2._2_.BD
 
 
 
-        public static DataTable traer_datos_sqlUSUARIO()  //en grilla//esta no va
-
+        public static bool ExisteAdministrador()
         {
-            SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
+            string consulta = @"
+        SELECT COUNT(*)
+        FROM Usuario U
+        INNER JOIN Usuarios_Tipo UT
+            ON U.id_usuario_tipo = UT.id_usuario_tipo
+        WHERE UT.tipo = 'Administrador'
+        AND U.activo = 1";
+
+            
+
             cnn.Open();
-            DataTable tabla_usuarios = new DataTable();
 
-            string consulta_usuario = "select * from Usuario";
-            SqlCommand cmd = new SqlCommand(consulta_usuario, cnn);
+            SqlCommand comando = new SqlCommand(consulta, cnn);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(tabla_usuarios);
+            int cantidad = Convert.ToInt32(comando.ExecuteScalar());
 
             cnn.Close();
-            return tabla_usuarios;
+
+            if (cantidad > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        
 
         public static void traer_datos_sql(string consulta, DataGridView grilla)  //en grilla
 
