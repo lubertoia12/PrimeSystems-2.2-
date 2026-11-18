@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_filtro_usuarios = new System.Windows.Forms.Panel();
             this.btn_filtro_activas = new System.Windows.Forms.Button();
             this.btn_filtro_inactivas = new System.Windows.Forms.Button();
@@ -37,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_btn = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_borrar_user = new System.Windows.Forms.Button();
@@ -46,11 +48,12 @@
             this.btn_cancelar_user = new System.Windows.Forms.Button();
             this.panel_frm = new System.Windows.Forms.Panel();
             this.pnl_fondo = new System.Windows.Forms.Panel();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_filtro_usuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.pnl_btn.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnl_fondo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_filtro_usuarios
@@ -176,24 +179,6 @@
             this.textBox1.Size = new System.Drawing.Size(191, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // dgv_usuarios
-            // 
-            this.dgv_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_usuarios.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_usuarios.Location = new System.Drawing.Point(52, 110);
-            this.dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.ReadOnly = true;
-            this.dgv_usuarios.RowHeadersWidth = 51;
-            this.dgv_usuarios.RowTemplate.Height = 24;
-            this.dgv_usuarios.Size = new System.Drawing.Size(1249, 178);
-            this.dgv_usuarios.TabIndex = 1;
-            this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
-            // 
             // pnl_btn
             // 
             this.pnl_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -306,16 +291,58 @@
             // 
             this.pnl_fondo.AutoScroll = true;
             this.pnl_fondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.pnl_fondo.Controls.Add(this.dgv_usuarios);
             this.pnl_fondo.Controls.Add(this.pnl_btn);
             this.pnl_fondo.Controls.Add(this.pnl_filtro_usuarios);
             this.pnl_fondo.Controls.Add(this.panel_frm);
-            this.pnl_fondo.Controls.Add(this.dgv_usuarios);
             this.pnl_fondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_fondo.Name = "pnl_fondo";
             this.pnl_fondo.Size = new System.Drawing.Size(1520, 742);
             this.pnl_fondo.TabIndex = 0;
+            // 
+            // dgv_usuarios
+            // 
+            this.dgv_usuarios.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.dgv_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_usuarios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_usuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_usuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_usuarios.EnableHeadersVisualStyles = false;
+            this.dgv_usuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
+            this.dgv_usuarios.Location = new System.Drawing.Point(52, 112);
+            this.dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.RowHeadersVisible = false;
+            this.dgv_usuarios.RowHeadersWidth = 51;
+            this.dgv_usuarios.RowTemplate.Height = 24;
+            this.dgv_usuarios.Size = new System.Drawing.Size(1249, 176);
+            this.dgv_usuarios.TabIndex = 9;
             // 
             // USUARIOS
             // 
@@ -331,11 +358,11 @@
             this.Load += new System.EventHandler(this.USUARIOS_Load);
             this.pnl_filtro_usuarios.ResumeLayout(false);
             this.pnl_filtro_usuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.pnl_btn.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.pnl_fondo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,7 +378,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnl_fondo;
-        public System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_borrar_user;
         public System.Windows.Forms.Button btn_nuevo_user;
@@ -360,5 +386,6 @@
         private System.Windows.Forms.Button btn_filtro_activas;
         private System.Windows.Forms.Button btn_filtro_inactivas;
         private System.Windows.Forms.Button btn_filtro_todos;
+        public System.Windows.Forms.DataGridView dgv_usuarios;
     }
 }

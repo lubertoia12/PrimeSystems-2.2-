@@ -71,11 +71,11 @@
             this.gb_DetalleVenta.BackColor = System.Drawing.Color.White;
             this.gb_DetalleVenta.Controls.Add(this.panel2);
             this.gb_DetalleVenta.Controls.Add(this.dgv_compras_carrito);
-            this.gb_DetalleVenta.Location = new System.Drawing.Point(81, 158);
+            this.gb_DetalleVenta.Location = new System.Drawing.Point(82, 141);
             this.gb_DetalleVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_DetalleVenta.Name = "gb_DetalleVenta";
             this.gb_DetalleVenta.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_DetalleVenta.Size = new System.Drawing.Size(1172, 323);
+            this.gb_DetalleVenta.Size = new System.Drawing.Size(1172, 438);
             this.gb_DetalleVenta.TabIndex = 6;
             this.gb_DetalleVenta.TabStop = false;
             this.gb_DetalleVenta.Text = "Detalle de compra";
@@ -107,7 +107,7 @@
             this.btn_quitar_art.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
             this.btn_quitar_art.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_quitar_art.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.btn_quitar_art.Location = new System.Drawing.Point(918, 53);
+            this.btn_quitar_art.Location = new System.Drawing.Point(892, 52);
             this.btn_quitar_art.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_quitar_art.Name = "btn_quitar_art";
             this.btn_quitar_art.Size = new System.Drawing.Size(163, 34);
@@ -120,14 +120,14 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(82, 25);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(207, 24);
+            this.comboBox2.Size = new System.Drawing.Size(185, 24);
             this.comboBox2.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label8.Location = new System.Drawing.Point(531, 26);
+            this.label8.Location = new System.Drawing.Point(491, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 16);
             this.label8.TabIndex = 4;
@@ -147,7 +147,7 @@
             // 
             this.lbl_precio_unitario.AutoSize = true;
             this.lbl_precio_unitario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.lbl_precio_unitario.Location = new System.Drawing.Point(632, 28);
+            this.lbl_precio_unitario.Location = new System.Drawing.Point(592, 33);
             this.lbl_precio_unitario.Name = "lbl_precio_unitario";
             this.lbl_precio_unitario.Size = new System.Drawing.Size(69, 16);
             this.lbl_precio_unitario.TabIndex = 7;
@@ -157,7 +157,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label9.Location = new System.Drawing.Point(737, 27);
+            this.label9.Location = new System.Drawing.Point(681, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 5;
@@ -165,16 +165,16 @@
             // 
             // NuDcantidad
             // 
-            this.NuDcantidad.Location = new System.Drawing.Point(401, 25);
+            this.NuDcantidad.Location = new System.Drawing.Point(372, 27);
             this.NuDcantidad.Name = "NuDcantidad";
-            this.NuDcantidad.Size = new System.Drawing.Size(95, 22);
+            this.NuDcantidad.Size = new System.Drawing.Size(79, 22);
             this.NuDcantidad.TabIndex = 18;
             // 
             // lbl_precio_total
             // 
             this.lbl_precio_total.AutoSize = true;
             this.lbl_precio_total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.lbl_precio_total.Location = new System.Drawing.Point(831, 27);
+            this.lbl_precio_total.Location = new System.Drawing.Point(775, 31);
             this.lbl_precio_total.Name = "lbl_precio_total";
             this.lbl_precio_total.Size = new System.Drawing.Size(69, 16);
             this.lbl_precio_total.TabIndex = 8;
@@ -184,7 +184,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label10.Location = new System.Drawing.Point(319, 31);
+            this.label10.Location = new System.Drawing.Point(290, 33);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 5;
@@ -199,7 +199,7 @@
             this.btn_add_art.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(122)))), ((int)(((byte)(166)))));
             this.btn_add_art.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add_art.ForeColor = System.Drawing.Color.White;
-            this.btn_add_art.Location = new System.Drawing.Point(918, 15);
+            this.btn_add_art.Location = new System.Drawing.Point(892, 14);
             this.btn_add_art.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add_art.Name = "btn_add_art";
             this.btn_add_art.Size = new System.Drawing.Size(163, 34);
@@ -246,7 +246,7 @@
             this.dgv_compras_carrito.RowHeadersVisible = false;
             this.dgv_compras_carrito.RowHeadersWidth = 51;
             this.dgv_compras_carrito.RowTemplate.Height = 24;
-            this.dgv_compras_carrito.Size = new System.Drawing.Size(1098, 158);
+            this.dgv_compras_carrito.Size = new System.Drawing.Size(1098, 176);
             this.dgv_compras_carrito.TabIndex = 8;
             // 
             // pnl_SubTotal
@@ -259,7 +259,7 @@
             this.pnl_SubTotal.Controls.Add(this.btn_proc_pago);
             this.pnl_SubTotal.Controls.Add(this.lbl_SUBTOTAL);
             this.pnl_SubTotal.Controls.Add(this.label2);
-            this.pnl_SubTotal.Location = new System.Drawing.Point(81, 484);
+            this.pnl_SubTotal.Location = new System.Drawing.Point(80, 476);
             this.pnl_SubTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_SubTotal.Name = "pnl_SubTotal";
             this.pnl_SubTotal.Size = new System.Drawing.Size(1172, 99);
@@ -347,7 +347,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1170, 128);
+            this.groupBox1.Size = new System.Drawing.Size(1170, 101);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Involucra";
@@ -355,14 +355,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(162, 65);
+            this.comboBox1.Location = new System.Drawing.Point(151, 57);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(207, 24);
             this.comboBox1.TabIndex = 23;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(434, 63);
+            this.dateTimePicker1.Location = new System.Drawing.Point(423, 55);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(276, 22);
             this.dateTimePicker1.TabIndex = 22;
@@ -371,7 +371,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label5.Location = new System.Drawing.Point(823, 36);
+            this.label5.Location = new System.Drawing.Point(812, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 16);
             this.label5.TabIndex = 21;
@@ -381,7 +381,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label3.Location = new System.Drawing.Point(226, 36);
+            this.label3.Location = new System.Drawing.Point(215, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 20;
@@ -391,7 +391,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.label15.Location = new System.Drawing.Point(512, 36);
+            this.label15.Location = new System.Drawing.Point(501, 28);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 16);
             this.label15.TabIndex = 3;
@@ -402,7 +402,7 @@
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.textBox2.Location = new System.Drawing.Point(788, 63);
+            this.textBox2.Location = new System.Drawing.Point(777, 55);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -413,12 +413,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1333, 609);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnl_SubTotal);
             this.Controls.Add(this.gb_DetalleVenta);
             this.Name = "alta_compra";
             this.Text = "alta_compra";
+            this.Load += new System.EventHandler(this.alta_compra_Load);
             this.gb_DetalleVenta.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

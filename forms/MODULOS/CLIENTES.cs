@@ -56,7 +56,7 @@ namespace PrimeSystems_2._2_.forms.MODULOS
                 CUIT, entidad AS Entidad, tipo AS Tipo, telefono AS Telefono,
                 mail AS Mail, direccion AS Direccion, activo AS Estado
                 from Cliente where activo = 0";
-            consultas.traer_datos_sql(consulta, dgv_clientes);
+            consultas.traer_datos_sql(consulta, dgv_clientes    );
         }
 
 

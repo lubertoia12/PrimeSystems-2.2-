@@ -109,6 +109,15 @@ namespace PrimeSystems_2._2_.UserControls
             ventas.Show();
         }
 
+        private void aRTICULOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controles.panel_padre.Controls.Clear();
+
+            agregar_articulo ventas = new agregar_articulo();
+
+            ventas.ShowDialog();
+        }
+
 
 
 

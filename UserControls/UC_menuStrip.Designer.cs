@@ -35,6 +35,7 @@
             this.cOMPRASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aRTICULOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,12 +99,21 @@
             this.cLIENTEToolStripMenuItem,
             this.pROVEEDORToolStripMenuItem,
             this.cOMPRASToolStripMenuItem,
-            this.aRTToolStripMenuItem});
+            this.aRTToolStripMenuItem,
+            this.aRTICULOSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(854, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aRTICULOSToolStripMenuItem
+            // 
+            this.aRTICULOSToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aRTICULOSToolStripMenuItem.Name = "aRTICULOSToolStripMenuItem";
+            this.aRTICULOSToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
+            this.aRTICULOSToolStripMenuItem.Text = "ARTICULOS";
+            this.aRTICULOSToolStripMenuItem.Click += new System.EventHandler(this.aRTICULOSToolStripMenuItem_Click);
             // 
             // UC_menuStrip
             // 
@@ -128,5 +138,6 @@
         private System.Windows.Forms.ToolStripMenuItem cOMPRASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aRTToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem;
     }
 }

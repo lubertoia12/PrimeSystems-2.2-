@@ -21,7 +21,6 @@ namespace PrimeSystems_2._2_.pruebas
         }
 
 
-
         private void ventas_interfaz_Load(object sender, EventArgs e)
         {
             // se carga
@@ -82,7 +81,7 @@ namespace PrimeSystems_2._2_.pruebas
 
             SqlConnection cn = new SqlConnection(ConectaBD.StringConnection);
             SqlCommand cmd = new SqlCommand("select art_descripcion from Articulo", cn);
-            cn.Open();                       // antes decia cnn.Open() y el comando usa cn
+            cn.Open();                       // 
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -144,15 +143,107 @@ namespace PrimeSystems_2._2_.pruebas
 
         private void btn_proc_pago_Click(object sender, EventArgs e)
         {
+           
+            if (dgv_carrito_venta.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay artículos en la venta");
+                return;
+            }
 
+            // busca el id del cliente escrito en el textbox
+            SqlConnection cnnCli = new SqlConnection(ConectaBD.StringConnection);
+            SqlCommand cmdCli = new SqlCommand("select id_cliente from Cliente where isnull(nombre, '') + ' ' + isnull(apellido, '') = @c", cnnCli);
+            cmdCli.Parameters.AddWithValue("@c", txtCliente.Text.Trim());
+
+            cnnCli.Open();
+            object resCli = cmdCli.ExecuteScalar();
+            cnnCli.Close();
+
+            if (resCli == null)
+            {
+                MessageBox.Show("Elegí un cliente de la lista");
+                return;
+            }
+
+            int idCliente = Convert.ToInt32(resCli);
+            int idUsuarioLogueado = ConectaBD.IdUsuarioActual;   
+            decimal total = Convert.ToDecimal(lbl_TOTAL_FINAL.Text);
+            int idVenta;
+
+            // guarda la venta 
+            SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
+            cnn.Open();
+            SqlTransaction tran = cnn.BeginTransaction();
+
+            try
+            {
+                // cabecera
+                SqlCommand cmd = new SqlCommand(@"insert into H_ventas (id_usuario, id_cliente, fecha_hora, subtotal, descuento, total)
+                    values (@u, @c, getdate(), @sub, 0, @tot);
+                    select SCOPE_IDENTITY();", cnn, tran);
+                cmd.Parameters.AddWithValue("@u", idUsuarioLogueado);
+                cmd.Parameters.AddWithValue("@c", idCliente);
+                cmd.Parameters.AddWithValue("@sub", total);
+                cmd.Parameters.AddWithValue("@tot", total);
+                idVenta = Convert.ToInt32(cmd.ExecuteScalar());
+
+                // una fila de detalle por cada artículo de la grilla
+                foreach (DataGridViewRow fila in dgv_carrito_venta.Rows)
+                {
+                    if (fila.IsNewRow) continue;
+
+                    SqlCommand det = new SqlCommand(@"insert into H_ventas_detalles (id_h_ventas, id_articulo, descripcion, precio_unitario, cantidad, precio_total)
+                        select @v, id_articulo, art_descripcion, @p, @c, @t
+                        from Articulo where art_descripcion = @d", cnn, tran);
+                    det.Parameters.AddWithValue("@v", idVenta);
+                    det.Parameters.AddWithValue("@d", fila.Cells["Articulo"].Value.ToString());
+                    det.Parameters.AddWithValue("@c", Convert.ToInt32(fila.Cells["Cantidad"].Value));
+                    det.Parameters.AddWithValue("@p", Convert.ToDecimal(fila.Cells["Precio"].Value));
+                    det.Parameters.AddWithValue("@t", Convert.ToDecimal(fila.Cells["Total"].Value));
+                    det.ExecuteNonQuery();
+                }
+
+                tran.Commit();
+            }
+            catch (Exception ex)
+            {
+                tran.Rollback();
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+
+            MessageBox.Show("Venta registrada correctamente. N° " + idVenta);
+
+            // limpia todo y vuelve a la pantalla principal 
+            dgv_carrito_venta.Rows.Clear();
+            txtCliente.Clear();
+            txt_articulo.Clear();
+            NuDcantidad.Value = 1;
+            ActualizarTotales();
+
+            //habilitar
+            btn_borrar_venta.Enabled = true;
+            btn_modificar_venta.Enabled = true;
+            btn_nueva_venta.Enabled = true;
+            btn_cancelar_venta.Enabled = false;
+
+            //ocultar
+            gb_DetalleVenta.Visible = false;
+            dgv_carrito_venta.Visible = false;
+            pnl_SubTotal.Visible = false;
+
+            //mostrar
+            dgv_ventas_h.Visible = true;
+            pnl_filtro.Visible = true;
+
+            CargarGrillaTODAS();   // muestra la venta nueva en el historial
         }
 
-        private void btn_crear_producto_Click(object sender, EventArgs e)
-        {
-            agregar_articulo art = new agregar_articulo();
-            art.ShowDialog();
-        }
-
+        
         private void btn_filtro_todos_Click(object sender, EventArgs e)
         {
             CargarGrillaTODAS();
@@ -172,41 +263,6 @@ namespace PrimeSystems_2._2_.pruebas
             btn_borrar_venta.Enabled = false;
         }
 
-        private void btn_add_art_Click(object sender, EventArgs e)
-        {
-            SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
-            SqlCommand cmd = new SqlCommand(@"select s.costo + (s.costo * s.ganancia / 100)
-                from Articulo a
-                inner join Stock s on s.id_articulo = a.id_articulo
-                where a.art_descripcion = @desc", cnn);
-            cmd.Parameters.AddWithValue("@desc", txt_articulo.Text);
-
-            cnn.Open();
-            object resultado = cmd.ExecuteScalar();
-            cnn.Close();
-
-            if (resultado == null)
-            {
-                MessageBox.Show("El artículo no existe");
-                return;
-            }
-
-            decimal precio = Convert.ToDecimal(resultado);
-            int cantidad = (int)NuDcantidad.Value;
-
-            dgv_carrito_venta.Rows.Add(txt_articulo.Text, cantidad, precio, precio * cantidad);
-            ActualizarTotales();
-            txt_articulo.Clear();
-            NuDcantidad.Value = 1;
-            txt_articulo.Focus();
-        }
-
-        private void btn_quitar_art_Click(object sender, EventArgs e)
-        {
-            txt_articulo.Clear();
-            NuDcantidad.Value = 1;
-            txt_articulo.Focus();
-        }
 
         private void cargaEncabezados()
         {
@@ -244,7 +300,61 @@ namespace PrimeSystems_2._2_.pruebas
 
         decimal precioUnitario = 0;
 
-        private void txt_articulo_TextChanged(object sender, EventArgs e)
+
+        private void CalcularTotal()
+        {
+            decimal total = precioUnitario * NuDcantidad.Value;
+            lbl_precio_total.Text = total.ToString("N2");
+        }
+
+        private void ActualizarTotales()
+        {
+            decimal subtotal = 0;
+
+            foreach (DataGridViewRow fila in dgv_carrito_venta.Rows)
+            {
+                if (fila.IsNewRow) continue;
+                subtotal += Convert.ToDecimal(fila.Cells["Total"].Value);
+            }
+
+            lbl_SUBTOTAL.Text = subtotal.ToString("N2");
+            lbl_TOTAL_FINAL.Text = subtotal.ToString("N2");   
+        }
+
+
+        private void dgv_carrito_venta_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_carrito_venta.Columns[e.ColumnIndex].Name != "Cantidad") return;
+
+            DataGridViewRow fila = dgv_carrito_venta.Rows[e.RowIndex];
+
+            int cantidad;
+            if (!int.TryParse(Convert.ToString(fila.Cells["Cantidad"].Value), out cantidad) || cantidad <= 0)
+                cantidad = 1;
+
+            decimal precio = Convert.ToDecimal(fila.Cells["Precio"].Value);
+
+            fila.Cells["Cantidad"].Value = cantidad;
+            fila.Cells["Total"].Value = precio * cantidad;
+
+            ActualizarTotales();
+        }
+
+        private void dgv_carrito_venta_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgv_carrito_venta.Columns[e.ColumnIndex].Name == "Quitar")
+            {
+                dgv_carrito_venta.Rows.RemoveAt(e.RowIndex);
+                ActualizarTotales();
+            }
+        }
+
+        private void NuDcantidad_ValueChanged_1(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
+
+        private void txt_articulo_TextChanged_1(object sender, EventArgs e)
         {
             SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
             SqlCommand cmd = new SqlCommand(@"select s.costo + (s.costo * s.ganancia / 100)
@@ -264,41 +374,50 @@ namespace PrimeSystems_2._2_.pruebas
 
             lbl_precio_unitario.Text = precioUnitario.ToString("N2");
             CalcularTotal();
+
         }
 
-        private void NuDcantidad_ValueChanged(object sender, EventArgs e)
+        private void btn_quitar_art_Click_1(object sender, EventArgs e)
         {
-            CalcularTotal();
+
+            txt_articulo.Clear();
+            NuDcantidad.Value = 1;
+            txt_articulo.Focus();
         }
 
-        private void CalcularTotal()
+        private void btn_crear_art_Click(object sender, EventArgs e)
         {
-            decimal total = precioUnitario * NuDcantidad.Value;
-            lbl_precio_total.Text = total.ToString("N2");
+            agregar_articulo art = new agregar_articulo();
+            art.ShowDialog();
         }
 
-        private void ActualizarTotales()
+        private void btn_add_art_Click_1(object sender, EventArgs e)
         {
-            decimal subtotal = 0;
+            SqlConnection cnn = new SqlConnection(ConectaBD.StringConnection);
+            SqlCommand cmd = new SqlCommand(@"select s.costo + (s.costo * s.ganancia / 100)
+                from Articulo a
+                inner join Stock s on s.id_articulo = a.id_articulo
+                where a.art_descripcion = @desc", cnn);
+            cmd.Parameters.AddWithValue("@desc", txt_articulo.Text);
 
-            foreach (DataGridViewRow fila in dgv_carrito_venta.Rows)
+            cnn.Open();
+            object resultado = cmd.ExecuteScalar();
+            cnn.Close();
+
+            if (resultado == null)
             {
-                if (fila.IsNewRow) continue;
-                subtotal += Convert.ToDecimal(fila.Cells["Total"].Value);
+                MessageBox.Show("El artículo no existe");
+                return;
             }
 
-            lbl_SUBTOTAL.Text = subtotal.ToString("N2");
-            lbl_TOTAL_FINAL.Text = subtotal.ToString("N2");   // sin IVA ni descuento por ahora
-        }
+            decimal precio = Convert.ToDecimal(resultado);
+            int cantidad = (int)NuDcantidad.Value;
 
-        private void dgv_carrito_venta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgv_carrito_venta_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dgv_carrito_venta.Rows.Add(txt_articulo.Text, cantidad, precio, precio * cantidad);
+            ActualizarTotales();
+            txt_articulo.Clear();
+            NuDcantidad.Value = 1;
+            txt_articulo.Focus();
         }
     }
 }

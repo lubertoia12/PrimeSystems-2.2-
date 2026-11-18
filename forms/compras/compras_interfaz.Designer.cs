@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_fondo = new System.Windows.Forms.Panel();
             this.panelcont = new System.Windows.Forms.Panel();
+            this.dgv_compras_h = new System.Windows.Forms.DataGridView();
             this.pnl_botones = new System.Windows.Forms.Panel();
             this.gb_botonesABM_ventas = new System.Windows.Forms.GroupBox();
             this.btn_borrar_compra = new System.Windows.Forms.Button();
@@ -46,13 +47,12 @@
             this.btn_filtro_todos = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_cliente = new System.Windows.Forms.TextBox();
-            this.dgv_compras_h = new System.Windows.Forms.DataGridView();
             this.panel_fondo.SuspendLayout();
             this.panelcont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).BeginInit();
             this.pnl_botones.SuspendLayout();
             this.gb_botonesABM_ventas.SuspendLayout();
             this.pnl_filtro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_fondo
@@ -71,12 +71,55 @@
             // 
             // panelcont
             // 
+            this.panelcont.AutoScroll = true;
             this.panelcont.Controls.Add(this.dgv_compras_h);
             this.panelcont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcont.Location = new System.Drawing.Point(0, 86);
             this.panelcont.Name = "panelcont";
             this.panelcont.Size = new System.Drawing.Size(1351, 656);
             this.panelcont.TabIndex = 8;
+            // 
+            // dgv_compras_h
+            // 
+            this.dgv_compras_h.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.dgv_compras_h.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_compras_h.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_compras_h.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_compras_h.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_compras_h.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_compras_h.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_compras_h.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_compras_h.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_compras_h.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_compras_h.EnableHeadersVisualStyles = false;
+            this.dgv_compras_h.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
+            this.dgv_compras_h.Location = new System.Drawing.Point(80, 74);
+            this.dgv_compras_h.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_compras_h.Name = "dgv_compras_h";
+            this.dgv_compras_h.RowHeadersVisible = false;
+            this.dgv_compras_h.RowHeadersWidth = 51;
+            this.dgv_compras_h.RowTemplate.Height = 24;
+            this.dgv_compras_h.Size = new System.Drawing.Size(1176, 316);
+            this.dgv_compras_h.TabIndex = 3;
             // 
             // pnl_botones
             // 
@@ -214,6 +257,7 @@
             this.btn_filtro_activas.TabIndex = 4;
             this.btn_filtro_activas.Text = "ACTIVAS";
             this.btn_filtro_activas.UseVisualStyleBackColor = false;
+            this.btn_filtro_activas.Click += new System.EventHandler(this.btn_filtro_activas_Click);
             // 
             // btn_filtro_inactivas
             // 
@@ -231,6 +275,7 @@
             this.btn_filtro_inactivas.TabIndex = 3;
             this.btn_filtro_inactivas.Text = "INACTIVAS";
             this.btn_filtro_inactivas.UseVisualStyleBackColor = false;
+            this.btn_filtro_inactivas.Click += new System.EventHandler(this.btn_filtro_inactivas_Click);
             // 
             // btn_filtro_todos
             // 
@@ -248,6 +293,7 @@
             this.btn_filtro_todos.TabIndex = 2;
             this.btn_filtro_todos.Text = "TODAS";
             this.btn_filtro_todos.UseVisualStyleBackColor = false;
+            this.btn_filtro_todos.Click += new System.EventHandler(this.btn_filtro_todos_Click);
             // 
             // label3
             // 
@@ -270,48 +316,6 @@
             this.txt_cliente.Size = new System.Drawing.Size(197, 22);
             this.txt_cliente.TabIndex = 0;
             // 
-            // dgv_compras_h
-            // 
-            this.dgv_compras_h.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.dgv_compras_h.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_compras_h.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_compras_h.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_compras_h.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_compras_h.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_compras_h.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_compras_h.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_compras_h.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_compras_h.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_compras_h.EnableHeadersVisualStyles = false;
-            this.dgv_compras_h.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
-            this.dgv_compras_h.Location = new System.Drawing.Point(80, 74);
-            this.dgv_compras_h.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_compras_h.Name = "dgv_compras_h";
-            this.dgv_compras_h.RowHeadersVisible = false;
-            this.dgv_compras_h.RowHeadersWidth = 51;
-            this.dgv_compras_h.RowTemplate.Height = 24;
-            this.dgv_compras_h.Size = new System.Drawing.Size(1176, 256);
-            this.dgv_compras_h.TabIndex = 3;
-            // 
             // compras_interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,14 +324,15 @@
             this.Controls.Add(this.panel_fondo);
             this.Name = "compras_interfaz";
             this.Text = "compras_interfaz";
+            this.Load += new System.EventHandler(this.compras_interfaz_Load);
             this.panel_fondo.ResumeLayout(false);
             this.panelcont.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).EndInit();
             this.pnl_botones.ResumeLayout(false);
             this.gb_botonesABM_ventas.ResumeLayout(false);
             this.gb_botonesABM_ventas.PerformLayout();
             this.pnl_filtro.ResumeLayout(false);
             this.pnl_filtro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).EndInit();
             this.ResumeLayout(false);
 
         }

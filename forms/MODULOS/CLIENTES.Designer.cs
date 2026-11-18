@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_fondo = new System.Windows.Forms.Panel();
             this.pnl_btn = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -55,10 +58,10 @@
             // 
             this.pnl_fondo.AutoScroll = true;
             this.pnl_fondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.pnl_fondo.Controls.Add(this.dgv_clientes);
             this.pnl_fondo.Controls.Add(this.pnl_btn);
             this.pnl_fondo.Controls.Add(this.pnl_filtro_clientes);
             this.pnl_fondo.Controls.Add(this.panel_frm);
-            this.pnl_fondo.Controls.Add(this.dgv_clientes);
             this.pnl_fondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -274,17 +277,45 @@
             // 
             // dgv_clientes
             // 
-            this.dgv_clientes.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_clientes.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.dgv_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_clientes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_clientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_clientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_clientes.Location = new System.Drawing.Point(56, 110);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_clientes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_clientes.EnableHeadersVisualStyles = false;
+            this.dgv_clientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
+            this.dgv_clientes.Location = new System.Drawing.Point(51, 112);
             this.dgv_clientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_clientes.Name = "dgv_clientes";
-            this.dgv_clientes.ReadOnly = true;
+            this.dgv_clientes.RowHeadersVisible = false;
             this.dgv_clientes.RowHeadersWidth = 51;
             this.dgv_clientes.RowTemplate.Height = 24;
-            this.dgv_clientes.Size = new System.Drawing.Size(1245, 178);
-            this.dgv_clientes.TabIndex = 1;
-            this.dgv_clientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellClick);
+            this.dgv_clientes.Size = new System.Drawing.Size(1249, 176);
+            this.dgv_clientes.TabIndex = 11;
             // 
             // CLIENTES
             // 
@@ -317,7 +348,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnl_btn;
         public System.Windows.Forms.Panel panel_frm;
-        public System.Windows.Forms.DataGridView dgv_clientes;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_borrar_cliente;
         public System.Windows.Forms.Button btn_nuevo_cliente;
@@ -326,5 +356,6 @@
         private System.Windows.Forms.Button btn_filtro_activas;
         private System.Windows.Forms.Button btn_filtro_inactivas;
         private System.Windows.Forms.Button btn_filtro_todos;
+        public System.Windows.Forms.DataGridView dgv_clientes;
     }
 }
