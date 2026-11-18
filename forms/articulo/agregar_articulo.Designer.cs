@@ -51,6 +51,7 @@
             this.btn_eliminar_producto = new System.Windows.Forms.Button();
             this.btn_modificar_producto = new System.Windows.Forms.Button();
             this.gb_ListadoArticulos = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.filtro_proveedor = new System.Windows.Forms.TextBox();
@@ -58,12 +59,11 @@
             this.filtro_codigo_producto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_cerrar_pestana = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.gb_DatosArticulo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gb_ListadoArticulos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listado_articulos)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listado_articulos)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_DatosArticulo
@@ -89,11 +89,11 @@
             this.gb_DatosArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gb_DatosArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.gb_DatosArticulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gb_DatosArticulo.Location = new System.Drawing.Point(24, 66);
+            this.gb_DatosArticulo.Location = new System.Drawing.Point(24, 25);
             this.gb_DatosArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_DatosArticulo.Name = "gb_DatosArticulo";
             this.gb_DatosArticulo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_DatosArticulo.Size = new System.Drawing.Size(743, 324);
+            this.gb_DatosArticulo.Size = new System.Drawing.Size(743, 287);
             this.gb_DatosArticulo.TabIndex = 0;
             this.gb_DatosArticulo.TabStop = false;
             this.gb_DatosArticulo.Text = "Datos del Articulos";
@@ -141,7 +141,7 @@
             this.panel1.Controls.Add(this.btn_agregar_producto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.panel1.Location = new System.Drawing.Point(3, 245);
+            this.panel1.Location = new System.Drawing.Point(3, 208);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 77);
@@ -153,7 +153,7 @@
             this.btn_actualizar_producto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_actualizar_producto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualizar_producto.ForeColor = System.Drawing.Color.Black;
-            this.btn_actualizar_producto.Location = new System.Drawing.Point(292, 22);
+            this.btn_actualizar_producto.Location = new System.Drawing.Point(287, 22);
             this.btn_actualizar_producto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualizar_producto.Name = "btn_actualizar_producto";
             this.btn_actualizar_producto.Size = new System.Drawing.Size(195, 42);
@@ -175,6 +175,7 @@
             this.btn_agregar_producto.TabIndex = 0;
             this.btn_agregar_producto.Text = "Agregar articulo";
             this.btn_agregar_producto.UseVisualStyleBackColor = false;
+            this.btn_agregar_producto.Click += new System.EventHandler(this.btn_agregar_producto_Click_1);
             // 
             // rd_activo_cliente_alta
             // 
@@ -182,7 +183,7 @@
             this.rd_activo_cliente_alta.Checked = true;
             this.rd_activo_cliente_alta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
             this.rd_activo_cliente_alta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rd_activo_cliente_alta.Location = new System.Drawing.Point(384, 196);
+            this.rd_activo_cliente_alta.Location = new System.Drawing.Point(384, 176);
             this.rd_activo_cliente_alta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rd_activo_cliente_alta.Name = "rd_activo_cliente_alta";
             this.rd_activo_cliente_alta.Size = new System.Drawing.Size(71, 24);
@@ -253,7 +254,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(300, 199);
+            this.label4.Location = new System.Drawing.Point(300, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 6;
@@ -366,21 +367,35 @@
             this.gb_ListadoArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gb_ListadoArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.gb_ListadoArticulos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gb_ListadoArticulos.Location = new System.Drawing.Point(27, 424);
+            this.gb_ListadoArticulos.Location = new System.Drawing.Point(24, 333);
             this.gb_ListadoArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_ListadoArticulos.Name = "gb_ListadoArticulos";
             this.gb_ListadoArticulos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_ListadoArticulos.Size = new System.Drawing.Size(740, 322);
+            this.gb_ListadoArticulos.Size = new System.Drawing.Size(740, 417);
             this.gb_ListadoArticulos.TabIndex = 1;
             this.gb_ListadoArticulos.TabStop = false;
             this.gb_ListadoArticulos.Text = "Listado de Articulo";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btn_eliminar_producto);
+            this.panel2.Controls.Add(this.btn_modificar_producto);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
+            this.panel2.Location = new System.Drawing.Point(3, 354);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(734, 61);
+            this.panel2.TabIndex = 14;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.label10.Location = new System.Drawing.Point(423, 55);
+            this.label10.Location = new System.Drawing.Point(434, 66);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 20);
             this.label10.TabIndex = 5;
@@ -391,7 +406,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.label9.Location = new System.Drawing.Point(211, 57);
+            this.label9.Location = new System.Drawing.Point(222, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 20);
             this.label9.TabIndex = 4;
@@ -401,7 +416,7 @@
             // 
             this.filtro_proveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.filtro_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.filtro_proveedor.Location = new System.Drawing.Point(527, 53);
+            this.filtro_proveedor.Location = new System.Drawing.Point(525, 63);
             this.filtro_proveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filtro_proveedor.Name = "filtro_proveedor";
             this.filtro_proveedor.Size = new System.Drawing.Size(129, 26);
@@ -411,19 +426,19 @@
             // 
             this.dgv_listado_articulos.BackgroundColor = System.Drawing.Color.White;
             this.dgv_listado_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listado_articulos.Location = new System.Drawing.Point(77, 102);
+            this.dgv_listado_articulos.Location = new System.Drawing.Point(6, 110);
             this.dgv_listado_articulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_listado_articulos.Name = "dgv_listado_articulos";
             this.dgv_listado_articulos.RowHeadersWidth = 51;
             this.dgv_listado_articulos.RowTemplate.Height = 28;
-            this.dgv_listado_articulos.Size = new System.Drawing.Size(579, 139);
+            this.dgv_listado_articulos.Size = new System.Drawing.Size(728, 183);
             this.dgv_listado_articulos.TabIndex = 2;
             // 
             // filtro_codigo_producto
             // 
             this.filtro_codigo_producto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.filtro_codigo_producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.filtro_codigo_producto.Location = new System.Drawing.Point(288, 54);
+            this.filtro_codigo_producto.Location = new System.Drawing.Point(299, 63);
             this.filtro_codigo_producto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filtro_codigo_producto.Name = "filtro_codigo_producto";
             this.filtro_codigo_producto.Size = new System.Drawing.Size(129, 26);
@@ -433,7 +448,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.label8.Location = new System.Drawing.Point(73, 55);
+            this.label8.Location = new System.Drawing.Point(84, 64);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 20);
             this.label8.TabIndex = 0;
@@ -445,7 +460,7 @@
             this.btn_cerrar_pestana.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_cerrar_pestana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar_pestana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
-            this.btn_cerrar_pestana.Location = new System.Drawing.Point(363, 794);
+            this.btn_cerrar_pestana.Location = new System.Drawing.Point(340, 791);
             this.btn_cerrar_pestana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cerrar_pestana.Name = "btn_cerrar_pestana";
             this.btn_cerrar_pestana.Size = new System.Drawing.Size(101, 34);
@@ -453,20 +468,6 @@
             this.btn_cerrar_pestana.Text = "CERRAR";
             this.btn_cerrar_pestana.UseVisualStyleBackColor = false;
             this.btn_cerrar_pestana.Click += new System.EventHandler(this.btn_cerrar_pestana_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btn_eliminar_producto);
-            this.panel2.Controls.Add(this.btn_modificar_producto);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
-            this.panel2.Location = new System.Drawing.Point(3, 259);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 61);
-            this.panel2.TabIndex = 14;
             // 
             // agregar_articulo
             // 
@@ -491,8 +492,8 @@
             this.panel1.PerformLayout();
             this.gb_ListadoArticulos.ResumeLayout(false);
             this.gb_ListadoArticulos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listado_articulos)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listado_articulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

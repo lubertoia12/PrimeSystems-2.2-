@@ -29,7 +29,7 @@ namespace PrimeSystems_2._2_.pruebas
         private void agregar_articulo_Load(object sender, EventArgs e)
         {
             // Eventos que no estaban enganchados en el diseñador
-            // (el -= evita que se ejecuten doble si despues los enganchas a mano)
+           
             btn_agregar_producto.Click -= btn_agregar_producto_Click;
             btn_agregar_producto.Click += btn_agregar_producto_Click;
 
@@ -42,12 +42,12 @@ namespace PrimeSystems_2._2_.pruebas
             filtro_proveedor.TextChanged -= filtros_TextChanged;
             filtro_proveedor.TextChanged += filtros_TextChanged;
 
-            // Combos: solo elegir
+            // combos solo elegir
             proveedor_art_alta_ab.DropDownStyle = ComboBoxStyle.DropDownList;
             categoria_art_alta_ab.DropDownStyle = ComboBoxStyle.DropDownList;
             subcategoria_art_alta_ab.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // Grilla del listado
+            //grilla del listado
             dgv_listado_articulos.ReadOnly = true;
             dgv_listado_articulos.AllowUserToAddRows = false;
             dgv_listado_articulos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -110,7 +110,7 @@ namespace PrimeSystems_2._2_.pruebas
             subcategoria_art_alta_ab.SelectedIndex = -1;
         }
 
-        // Al elegir una categoria, carga sus subcategorias
+        // aAl elegir una categoria, carga sus subcategorias
         private void categoria_art_alta_ab_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataRowView fila = categoria_art_alta_ab.SelectedItem as DataRowView;
@@ -122,7 +122,7 @@ namespace PrimeSystems_2._2_.pruebas
             CargarSubcategorias(Convert.ToInt32(fila["id_categoria"]));
         }
 
-        // Botones "+" (despues de cerrar el popup, se recarga el combo)
+        // btn + despues de cerrar el popup se recarga el combo
         private void btn_agregar_proveedor_Click(object sender, EventArgs e)
         {
             alta_proveedor_popup proveedor = new alta_proveedor_popup();
@@ -195,7 +195,7 @@ namespace PrimeSystems_2._2_.pruebas
                 return false;
             }
 
-            // La descripcion no se puede repetir: ventas y compras buscan el articulo por su descripcion
+            // descripc no se puede repetir ventas y compras buscan el articulo por su descripcion
             DataTable repetido = Traer("select count(*) from Articulo where art_descripcion = @d and id_articulo <> @id",
                 new SqlParameter("@d", desc_articulo_alta.Text.Trim()),
                 new SqlParameter("@id", idSeleccionado));
@@ -404,6 +404,16 @@ namespace PrimeSystems_2._2_.pruebas
         private void btn_cerrar_pestana_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e) //boton actualizar
+        {
+
+        }
+
+        private void btn_agregar_producto_Click_1(object sender, EventArgs e) 
+        {
+
         }
     }
 }
