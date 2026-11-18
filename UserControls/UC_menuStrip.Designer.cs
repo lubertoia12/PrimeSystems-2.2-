@@ -80,9 +80,11 @@
             // 
             // aRTToolStripMenuItem
             // 
+            this.aRTToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aRTToolStripMenuItem.Name = "aRTToolStripMenuItem";
-            this.aRTToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
-            this.aRTToolStripMenuItem.Text = "ARTICULOS";
+            this.aRTToolStripMenuItem.Size = new System.Drawing.Size(103, 25);
+            this.aRTToolStripMenuItem.Text = "COMPRAS";
+            this.aRTToolStripMenuItem.Click += new System.EventHandler(this.aRTToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 

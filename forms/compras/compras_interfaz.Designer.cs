@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_fondo = new System.Windows.Forms.Panel();
-            this.dgv_carrito_venta = new System.Windows.Forms.DataGridView();
+            this.panelcont = new System.Windows.Forms.Panel();
             this.pnl_botones = new System.Windows.Forms.Panel();
             this.gb_botonesABM_ventas = new System.Windows.Forms.GroupBox();
             this.btn_borrar_compra = new System.Windows.Forms.Button();
@@ -49,21 +46,12 @@
             this.btn_filtro_todos = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_cliente = new System.Windows.Forms.TextBox();
-            this.pnl_SubTotal = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_TOTAL_FINAL = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btn_proc_pago = new System.Windows.Forms.Button();
-            this.lbl_SUBTOTAL = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgv_compras_h = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_fondo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_carrito_venta)).BeginInit();
+            this.panelcont.SuspendLayout();
             this.pnl_botones.SuspendLayout();
             this.gb_botonesABM_ventas.SuspendLayout();
             this.pnl_filtro.SuspendLayout();
-            this.pnl_SubTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,12 +59,9 @@
             // 
             this.panel_fondo.AutoScroll = true;
             this.panel_fondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.panel_fondo.Controls.Add(this.panel2);
-            this.panel_fondo.Controls.Add(this.dgv_carrito_venta);
+            this.panel_fondo.Controls.Add(this.panelcont);
             this.panel_fondo.Controls.Add(this.pnl_botones);
             this.panel_fondo.Controls.Add(this.pnl_filtro);
-            this.panel_fondo.Controls.Add(this.pnl_SubTotal);
-            this.panel_fondo.Controls.Add(this.dgv_compras_h);
             this.panel_fondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_fondo.Location = new System.Drawing.Point(0, 0);
             this.panel_fondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -84,47 +69,14 @@
             this.panel_fondo.Size = new System.Drawing.Size(1520, 742);
             this.panel_fondo.TabIndex = 1;
             // 
-            // dgv_carrito_venta
+            // panelcont
             // 
-            this.dgv_carrito_venta.AllowUserToAddRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.dgv_carrito_venta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_carrito_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_carrito_venta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_carrito_venta.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_carrito_venta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_carrito_venta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_carrito_venta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_carrito_venta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_carrito_venta.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgv_carrito_venta.EnableHeadersVisualStyles = false;
-            this.dgv_carrito_venta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
-            this.dgv_carrito_venta.Location = new System.Drawing.Point(70, 340);
-            this.dgv_carrito_venta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_carrito_venta.Name = "dgv_carrito_venta";
-            this.dgv_carrito_venta.RowHeadersVisible = false;
-            this.dgv_carrito_venta.RowHeadersWidth = 51;
-            this.dgv_carrito_venta.RowTemplate.Height = 24;
-            this.dgv_carrito_venta.Size = new System.Drawing.Size(1221, 246);
-            this.dgv_carrito_venta.TabIndex = 7;
+            this.panelcont.Controls.Add(this.dgv_compras_h);
+            this.panelcont.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelcont.Location = new System.Drawing.Point(0, 86);
+            this.panelcont.Name = "panelcont";
+            this.panelcont.Size = new System.Drawing.Size(1351, 656);
+            this.panelcont.TabIndex = 8;
             // 
             // pnl_botones
             // 
@@ -184,6 +136,7 @@
             this.btn_nueva_compra.TabIndex = 9;
             this.btn_nueva_compra.Text = "NUEVO";
             this.btn_nueva_compra.UseVisualStyleBackColor = false;
+            this.btn_nueva_compra.Click += new System.EventHandler(this.btn_nueva_compra_Click);
             // 
             // btn_modificar_compra
             // 
@@ -317,97 +270,12 @@
             this.txt_cliente.Size = new System.Drawing.Size(197, 22);
             this.txt_cliente.TabIndex = 0;
             // 
-            // pnl_SubTotal
-            // 
-            this.pnl_SubTotal.BackColor = System.Drawing.Color.White;
-            this.pnl_SubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_SubTotal.Controls.Add(this.panel1);
-            this.pnl_SubTotal.Controls.Add(this.lbl_TOTAL_FINAL);
-            this.pnl_SubTotal.Controls.Add(this.label14);
-            this.pnl_SubTotal.Controls.Add(this.btn_proc_pago);
-            this.pnl_SubTotal.Controls.Add(this.lbl_SUBTOTAL);
-            this.pnl_SubTotal.Controls.Add(this.label2);
-            this.pnl_SubTotal.Location = new System.Drawing.Point(70, 589);
-            this.pnl_SubTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_SubTotal.Name = "pnl_SubTotal";
-            this.pnl_SubTotal.Size = new System.Drawing.Size(1221, 99);
-            this.pnl_SubTotal.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1219, 10);
-            this.panel1.TabIndex = 8;
-            // 
-            // lbl_TOTAL_FINAL
-            // 
-            this.lbl_TOTAL_FINAL.AutoSize = true;
-            this.lbl_TOTAL_FINAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TOTAL_FINAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            this.lbl_TOTAL_FINAL.Location = new System.Drawing.Point(793, 33);
-            this.lbl_TOTAL_FINAL.Name = "lbl_TOTAL_FINAL";
-            this.lbl_TOTAL_FINAL.Size = new System.Drawing.Size(139, 29);
-            this.lbl_TOTAL_FINAL.TabIndex = 13;
-            this.lbl_TOTAL_FINAL.Text = "123,000.00";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            this.label14.Location = new System.Drawing.Point(708, 43);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 16);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "TOTAL";
-            // 
-            // btn_proc_pago
-            // 
-            this.btn_proc_pago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(142)))));
-            this.btn_proc_pago.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_proc_pago.FlatAppearance.BorderSize = 0;
-            this.btn_proc_pago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(155)))), ((int)(((byte)(125)))));
-            this.btn_proc_pago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_proc_pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_proc_pago.ForeColor = System.Drawing.Color.White;
-            this.btn_proc_pago.Location = new System.Drawing.Point(1044, 26);
-            this.btn_proc_pago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_proc_pago.Name = "btn_proc_pago";
-            this.btn_proc_pago.Size = new System.Drawing.Size(140, 57);
-            this.btn_proc_pago.TabIndex = 9;
-            this.btn_proc_pago.Text = "PROCESAR VENTA";
-            this.btn_proc_pago.UseVisualStyleBackColor = false;
-            // 
-            // lbl_SUBTOTAL
-            // 
-            this.lbl_SUBTOTAL.AutoSize = true;
-            this.lbl_SUBTOTAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.lbl_SUBTOTAL.Location = new System.Drawing.Point(333, 46);
-            this.lbl_SUBTOTAL.Name = "lbl_SUBTOTAL";
-            this.lbl_SUBTOTAL.Size = new System.Drawing.Size(69, 16);
-            this.lbl_SUBTOTAL.TabIndex = 2;
-            this.lbl_SUBTOTAL.Text = "123,000.00";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(122)))), ((int)(((byte)(138)))));
-            this.label2.Location = new System.Drawing.Point(202, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "SUBTOTAL";
-            // 
             // dgv_compras_h
             // 
             this.dgv_compras_h.AllowUserToAddRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.dgv_compras_h.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.dgv_compras_h.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_compras_h.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -415,41 +283,34 @@
             this.dgv_compras_h.BackgroundColor = System.Drawing.Color.White;
             this.dgv_compras_h.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_compras_h.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_compras_h.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_compras_h.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_compras_h.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_compras_h.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_compras_h.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_compras_h.EnableHeadersVisualStyles = false;
             this.dgv_compras_h.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(237)))));
-            this.dgv_compras_h.Location = new System.Drawing.Point(72, 110);
+            this.dgv_compras_h.Location = new System.Drawing.Point(80, 74);
             this.dgv_compras_h.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_compras_h.Name = "dgv_compras_h";
             this.dgv_compras_h.RowHeadersVisible = false;
             this.dgv_compras_h.RowHeadersWidth = 51;
             this.dgv_compras_h.RowTemplate.Height = 24;
-            this.dgv_compras_h.Size = new System.Drawing.Size(1221, 278);
+            this.dgv_compras_h.Size = new System.Drawing.Size(1176, 256);
             this.dgv_compras_h.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(99, 315);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 8;
             // 
             // compras_interfaz
             // 
@@ -460,14 +321,12 @@
             this.Name = "compras_interfaz";
             this.Text = "compras_interfaz";
             this.panel_fondo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_carrito_venta)).EndInit();
+            this.panelcont.ResumeLayout(false);
             this.pnl_botones.ResumeLayout(false);
             this.gb_botonesABM_ventas.ResumeLayout(false);
             this.gb_botonesABM_ventas.PerformLayout();
             this.pnl_filtro.ResumeLayout(false);
             this.pnl_filtro.PerformLayout();
-            this.pnl_SubTotal.ResumeLayout(false);
-            this.pnl_SubTotal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_compras_h)).EndInit();
             this.ResumeLayout(false);
 
@@ -476,7 +335,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_fondo;
-        public System.Windows.Forms.DataGridView dgv_carrito_venta;
         private System.Windows.Forms.Panel pnl_botones;
         private System.Windows.Forms.GroupBox gb_botonesABM_ventas;
         private System.Windows.Forms.Button btn_borrar_compra;
@@ -490,14 +348,7 @@
         private System.Windows.Forms.Button btn_filtro_todos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_cliente;
-        private System.Windows.Forms.Panel pnl_SubTotal;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbl_TOTAL_FINAL;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btn_proc_pago;
-        private System.Windows.Forms.Label lbl_SUBTOTAL;
-        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dgv_compras_h;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelcont;
     }
 }

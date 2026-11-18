@@ -16,5 +16,10 @@ namespace PrimeSystems_2._2_.forms.compras
         {
             InitializeComponent();
         }
+
+        private void btn_nueva_compra_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

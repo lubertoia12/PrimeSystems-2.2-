@@ -1,5 +1,6 @@
 ﻿using PrimeSystems_2._2_.forms;
 using PrimeSystems_2._2_.forms.cliente;
+using PrimeSystems_2._2_.forms.compras;
 using PrimeSystems_2._2_.forms.MODULOS;
 using PrimeSystems_2._2_.forms.proveedores;
 using PrimeSystems_2._2_.forms.usuario;
@@ -93,6 +94,19 @@ namespace PrimeSystems_2._2_.UserControls
 
             controles.panel_padre.Controls.Add(home);
 
+        }
+
+        private void aRTToolStripMenuItem_Click(object sender, EventArgs e) // COMPRASS
+        {
+            controles.panel_padre.Controls.Clear();
+
+            compras_interfaz ventas = new compras_interfaz();
+            ventas.TopLevel = false;
+            ventas.FormBorderStyle = FormBorderStyle.None;
+            ventas.Dock = DockStyle.Fill;
+
+            controles.panel_padre.Controls.Add(ventas);
+            ventas.Show();
         }
 
 
